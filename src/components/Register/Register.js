@@ -23,6 +23,16 @@ class Register extends Component {
 		this.setState({name: event.target.value})
 	}
 
+	validateEmail = (mail) => 
+	{
+	 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))
+	  {
+	    return (true)
+	  }
+	    alert("You have entered an invalid email address!")
+	    return (false)
+	}
+
 	onSubmitRegister = () => {
 		fetch('https://secret-oasis-18197.herokuapp.com/register', {
 			method: 'post',
@@ -35,7 +45,7 @@ class Register extends Component {
 		})
 			.then(response => response.json())
 			.then(user => {
-				if (user.id) {
+				if (user.id && this.validateEmail(this.state.email)) {
 					this.props.loadUser(user);
 					this.props.onRouteChange('home');
 				}
