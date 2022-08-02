@@ -68,6 +68,7 @@ class Signin extends Component  {
 			    <div className="">
 			      <input 
 			      	  onClick={this.onSubmitSignIn}
+			      	  style={{color: "blue"}}
 				      className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
 				      type="submit" 
 				      value="Sign in"
