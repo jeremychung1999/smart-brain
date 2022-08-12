@@ -1,6 +1,6 @@
 # smart-brain
 
-Face recognition web application that detects faces given an image url. Built with React, Node, Express, PostgreSQL and Clarifai Face recognition API.
+Face detection web application that detects faces given an image url. Built with React, Node, Express, PostgreSQL and Clarifai Face detection API.
 
 ![](https://github.com/jeremychung1999/smart-brain/blob/main/smart-brain-demo.gif)
 
